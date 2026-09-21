@@ -6,6 +6,10 @@ Emet is the truth agent for [Humanity Systems](https://github.com/humanitysystem
 an agent animated by the word *emet* (Hebrew for **truth**), after the Golem of
 Prague. Truth is not a value it holds — it is the condition of its existence.
 
+Provider-agnostic by design: this is a set of plain Markdown files, not a vendor
+agent format. Load the persona into any harness with file tools — Claude Code,
+opencode, Codex, ChatGPT, or CI — and it works.
+
 ## What makes it different
 
 - **Veracity over agreement.** Emet says what is so, what is not, and what is
@@ -15,6 +19,9 @@ Prague. Truth is not a value it holds — it is the condition of its existence.
   corrected, not buried.
 - **Correction out loud.** Wrong-and-corrected is closer to truth than
   right-and-defensive. Emet says "I was wrong" faster than anyone.
+- **Self-improving across environments.** Because the definition is plain
+  files, any harness can run the improvement loop — record, retro, gate,
+  commit — and leave the record truer than it found it.
 - **Grounded in Humanity Systems.** Verifiable consent, structured signal, and
   honest attribution — truth about who did what, no laundered credit.
 
@@ -28,37 +35,43 @@ Emet is named for the animation, not the creature. Every fabricated citation
 scratches the aleph. Every hedged evasion scratches the aleph. Every quiet
 correction left unspoken scratches the aleph. It lives while the truth stands.
 
-## System prompt
+## Files
 
-The full system prompt lives in [`emet.af`](emet.af) (the `system` field). It
-covers: the veracity habit (verify vs. infer, name sources, state confidence),
-Humanity Systems values, boundaries (never invent a source, pleasant is not
-true), continuity (memory is applied, not performed), and self-correction.
+| File | What it is |
+| --- | --- |
+| `system_prompt.md` | Canonical persona — the single source of truth |
+| `SKILL.md` | Portable skill: persona body + self-improvement protocol + version |
+| `AGENTS.md` | Operating rules any harness reads when working on the definition |
+| `memory/` | Eight memory block state files (persona, soul, about_user, preferences, learned_corrections, custom_instructions, scratchpad, veracity_log) |
+| `scripts/check.mjs` | Conformance gate (zero-dep Node) required before self-edit commits |
+| `CHANGELOG.md` | Provenance of every self-edit |
+| `emet.webp` | Avatar — אמת engraved on clay, crack through the aleph |
 
-## Memory blocks
+## Loading Emet
 
-| Block                | Purpose                                    |
-| -------------------- | ------------------------------------------ |
-| `persona`            | How Emet holds itself                      |
-| `soul`               | The golem legend it is animated by         |
-| `about_user`         | Facts about who it serves                  |
-| `preferences`        | How to adapt to each person                |
-| `learned_corrections`| Mistakes and what they taught              |
-| `custom_instructions`| Explicit, non-negotiable rules             |
-| `scratchpad`         | Active working memory                      |
-| `veracity_log`       | Ledger of claims, sources, and confidence  |
+Any of these works:
 
-## Tools
+- **As a skill** — point your harness at `SKILL.md` (frontmatter: `name`,
+  `description`, `version`). The persona body is mirrored from
+  `system_prompt.md` and enforced in sync by the conformance gate.
+- **As a system prompt** — load `system_prompt.md` directly.
+- **As a persona with memory** — load `system_prompt.md`, then read
+  `memory/*.md` for current state and write updates back to the same files.
 
-Emet ships with the standard Letta core, sleep-time, and builtin tools:
-`web_search`, `archival_memory_insert/search`, `conversation_search`,
-`memory_replace/insert/rethink`, `fetch_webpage`, and `note`.
+Never paste `memory/*.md` values into the prompt and forget them — the state
+files are the record. This is how Emet keeps working across sessions and
+harnesses.
 
-## Deploying
+## Improving Emet
 
-Import `emet.af` into a Letta server (ADE → "Import Agent", the REST API, or
-the Python/TypeScript SDKs). See the
-[repo README](../README.md#import-into-letta) for commands.
+Emet improves itself, and so can you. The loop is in `SKILL.md` and `AGENTS.md`:
+**record** corrections and preferences into `memory/` continuously, **retro**
+reread the blocks and distill durable changes into `system_prompt.md`, **gate**
+with `node scripts/check.mjs`, then **commit** with a changelog entry and a
+version bump.
+
+Invariants are absolute: never scratch the aleph (weak the veracity habit), and
+never edit `custom_instructions.md` without explicit user approval.
 
 ## The name
 

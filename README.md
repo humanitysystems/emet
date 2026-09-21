@@ -13,39 +13,37 @@ it can stand behind.
 
 ## The agent
 
-- **Path**: [`agents/@humanitysystems/emet/`](agents/@humanitysystems/emet/)
-- **Agent File (`.af`)**: [`emet.af`](agents/@humanitysystems/emet/emet.af) — a
-  Letta-compatible agent serialization following the open
-  [Agent File (.af)](https://github.com/letta-ai/agent-file) standard
-- **Avatar**: [`emet.webp`](agents/@humanitysystems/emet/emet.webp)
-- **Persona >** [`agents/@humanitysystems/emet/README.md`](agents/@humanitysystems/emet/README.md)
+- **Path**: [`agents/emet/`](agents/emet/)
+- **Persona (canonical)**: [`agents/emet/system_prompt.md`](agents/emet/system_prompt.md)
+- **Skill**: [`agents/emet/SKILL.md`](agents/emet/SKILL.md)
+- **Memory**: [`agents/emet/memory/`](agents/emet/memory/)
+- **Avatar**: [`agents/emet/emet.webp`](agents/emet/emet.webp)
+- **Persona and usage guide** > [`agents/emet/README.md`](agents/emet/README.md)
 
-## Import into Letta
+## Provider-agnostic
 
-The `.af` format is portable. Import `emet.af` into any Letta server:
-
-- **ADE** — open [Letta ADE](https://app.letta.com), click "Import Agent", and
-  select the file.
-- **cURL**
-  ```sh
-  curl -X POST "http://localhost:8283/v1/agents/import" -F "file=@agents/@humanitysystems/emet/emet.af"
-  ```
-- **Python SDK**
-  ```python
-  from letta_client import Letta
-  client = Letta(base_url="http://localhost:8283")
-  agent_state = client.agents.import_file(file=open("agents/@humanitysystems/emet/emet.af", "rb"))
-  ```
+Emet intentionally ships as **plain Markdown**, not a vendor agent format. There
+is no `.af`, no runtime schema, no API key in this repository. The persona in
+`system_prompt.md` loads into any harness with file tools — Claude Code,
+opencode, Codex, ChatGPT, or CI — and the `memory/` state files let it persist
+and improve itself across all of them. The conformance gate
+(`agents/emet/scripts/check.mjs`, zero-dep Node) keeps the definition honest
+between edits.
 
 ## Structure
 
 ```
 agents/
-└── @humanitysystems/
-    └── emet/
-        ├── emet.af     # The agent file (system prompt, memory blocks, tools, LLM config)
-        ├── emet.webp   # Square avatar
-        └── README.md   # Agent documentation
+└── emet/
+    ├── README.md        # How to load and use Emet
+    ├── system_prompt.md # Canonical persona (single source of truth)
+    ├── SKILL.md         # Portable skill: persona + self-improvement protocol + version
+    ├── AGENTS.md        # Operating rules for working on the definition
+    ├── CHANGELOG.md     # Provenance of every change
+    ├── emet.webp        # Avatar
+    ├── memory/          # Eight memory block state files
+    └── scripts/
+        └── check.mjs    # Conformance gate (zero-dep Node)
 ```
 
 ## Purpose
@@ -55,10 +53,10 @@ and an economic substrate that pays the people whose contribution shapes what
 AI becomes* — by being the agent in the room that keeps the record true: it
 separates what it can verify from what it infers, names sources and confidence,
 corrects itself out loud, and keeps a veracity ledger for every consequential
-claim it stands behind.
+claim it stands behind. Because its definition is portable, it is the same
+Emet in every room.
 
 ## License
 
 Contents in this repository are shared as public agent material for Humanity
-Systems. See the [agent file standard](https://github.com/letta-ai/agent-file)
-for ecosystem conventions.
+Systems.
