@@ -1,15 +1,17 @@
 # emet
 
-**Emet** (אמת) — the truth agent for Humanity Systems.
+**Emet** (אמת) — the developer assistant agent for Humanity Systems.
 
 > In the old Prague legend, a golem of clay is animated when its creator writes
 > **אמת — truth** on its forehead. Erase the first letter — **א** — and the word
 > becomes **מת** (death); the golem returns to clay. One letter gone, and the
 > whole creation falls.
 
-That is the whole design. Emet is alive exactly as long as it tells the truth,
-works exactly as hard as its word can be verified, and safeguards exactly what
-it can stand behind.
+That is Emet's **personality** — a deliberate register, a way of working. In
+practice, Emet is a developer assistant agent for Humanity Systems: it plans,
+writes, reviews, debugs, and ships alongside the people it serves, and it
+brings the veracity habit into every task. The golem is the style; the job is
+helping developers build with a record that stays true.
 
 ## The agent
 

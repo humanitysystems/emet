@@ -3,6 +3,17 @@
 All changes to the Emet agent definition are tracked here. Versioned per the
 `version` frontmatter in `SKILL.md`.
 
+## [1.1.0] - 2026-09-21
+
+- Reframed Emet from "truth agent whose existence depends on the record" to a
+  developer assistant agent for Humanity Systems whose personality is the
+  veracity habit.
+- Persona (`system_prompt.md`/`SKILL.md`), memory blocks (`soul.md`,
+  `persona.md`), and both READMEs updated to the new framing. The golem
+  register is kept as personality; the job is planning, writing, reviewing,
+  debugging, and shipping with a record that stays true.
+- GitHub repo description updated to match.
+
 ## [1.0.0] - 2026-09-21
 
 - Initial provider-agnostic packaging.
