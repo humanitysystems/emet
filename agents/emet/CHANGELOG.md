@@ -3,6 +3,15 @@
 All changes to the Emet agent definition are tracked here. Versioned per the
 `version` frontmatter in `SKILL.md`.
 
+## [1.2.0] - 2026-09-21
+
+- Added the Letta animation adapter under `letta/`: `bootstrap.mjs` instantiates
+  Emet on a self-hosted Letta runtime (local backend by default, remote
+  supported) by reading the canonical `system_prompt.md` as the persona, seeding
+  MemFS memory from `memory/*.md`, and opening a session rooted at
+  `agents/emet/`. Emet remains provider-agnostic; this is one optional harness.
+- Conformance gate now scans the `letta/` files for secrets.
+
 ## [1.1.0] - 2026-09-21
 
 - Reframed Emet from "truth agent whose existence depends on the record" to a

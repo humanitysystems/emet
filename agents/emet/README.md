@@ -48,6 +48,7 @@ scratches the aleph. It works while the truth stands.
 | `AGENTS.md` | Operating rules any harness reads when working on the definition |
 | `memory/` | Eight memory block state files (persona, soul, about_user, preferences, learned_corrections, custom_instructions, scratchpad, veracity_log) |
 | `scripts/check.mjs` | Conformance gate (zero-dep Node) required before self-edit commits |
+| `letta/` | Optional adapter that animates Emet on a self-hosted Letta runtime |
 | `CHANGELOG.md` | Provenance of every self-edit |
 | `emet.webp` | Avatar — אמת engraved on clay, crack through the aleph |
 

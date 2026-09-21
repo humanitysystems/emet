@@ -44,6 +44,7 @@ agents/
     ├── CHANGELOG.md     # Provenance of every change
     ├── emet.webp        # Avatar
     ├── memory/          # Eight memory block state files
+    ├── letta/           # Optional adapter: animate Emet on self-hosted Letta
     └── scripts/
         └── check.mjs    # Conformance gate (zero-dep Node)
 ```

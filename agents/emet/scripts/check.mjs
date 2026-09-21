@@ -93,7 +93,12 @@ const secretPats = [
   /-----BEGIN (RSA |EC |OPENSSH )?(.*? )?PRIVATE KEY-----/,
   /\bBearer\s+[A-Za-z0-9._~+\/-]{20,}=*/,
 ];
-const scanFiles = [...requiredAgentFiles, ...requiredMemoryFiles.map((f) => `memory/${f}`)];
+const scanFiles = [
+  ...requiredAgentFiles,
+  ...requiredMemoryFiles.map((f) => `memory/${f}`),
+  "letta/README.md",
+  "letta/package.json",
+];
 for (const f of scanFiles) {
   const body = read(join(agentDir, f));
   if (body === null) continue;
