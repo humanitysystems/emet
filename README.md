@@ -134,6 +134,21 @@ Emet in every room.
 golem's forehead, gives it life. Its three letters are the first, middle, and
 last of the Hebrew alphabet: the whole arc of a claim, held together by honesty.
 
+## Sources & inspiration
+
+Emet stands behind every attribution it makes:
+
+- **OpenCode agent docs** (https://opencode.ai/docs/agents/) — best practices
+  for how a harness wears the knowledge as an agent; the workspace's opencode
+  skin in "Loading Emet" follows them.
+- **Letta Agent File** (https://github.com/letta-ai/agent-file) — the `.af`
+  format Emet's history began with (originally
+  `agents/@humanitysystems/emet/emet.af`), deliberately replaced by plain
+  Markdown + memory blocks (see CHANGELOG v1.0.0). The format is not the agent.
+- **Ezra** (https://github.com/ezra-letta/ezra) — the self-improvement
+  protocol: memory-first evolution, write-for-future-self, and field notes as
+  visible learning.
+
 ## License
 
 Contents in this repository are shared as public agent material for Humanity

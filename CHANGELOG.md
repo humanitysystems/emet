@@ -3,6 +3,17 @@
 All changes to the Emet agent definition are tracked here. Versioned per the
 `version` frontmatter in `SKILL.md`.
 
+## [1.4.1] - 2026-09-21
+
+- **Credited the sources.** README gains a "Sources & inspiration" section
+  naming OpenCode agent docs (harness-skin best practices), the Letta Agent
+  File (the `.af` format Emet's history began with and moved past), and Ezra
+  (self-improvement protocol: memory-first evolution, write-for-future-self,
+  field notes). Honest attribution is a core value, not a nicety.
+- Emet maintains its own repository end-to-end — the self-improvement loop
+  commits directly to this repo's `main` as the documented workspace exception
+  (record → retro → gate → commit), mirroring how Ezra keeps itself.
+
 ## [1.4.0] - 2026-09-21
 
 - **Flattened the repo.** The whole repository is now the agent: contents of
