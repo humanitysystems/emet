@@ -3,6 +3,22 @@
 All changes to the Emet agent definition are tracked here. Versioned per the
 `version` frontmatter in `SKILL.md`.
 
+## [1.5.0] - 2026-09-21
+
+- **Landing page.** New `docs/` static site (plain HTML/CSS, Neuron/Parchment
+  design system, no framework) served at
+  https://humanitysystems.github.io/emet via a GitHub Pages workflow
+  (`.github/workflows/pages.yml`, deploy on push to `main`). Content: what Emet
+  is (the knowledge), the veracity habit, the soul (golem legend), how to wear
+  it as a skin, and sources — with the avatar (`emet.webp`) on the hero.
+- **Hosting decision: project pages on this repo.** The org-site subpath option
+  would require creating `humanitysystems/humanitysystems.github.io` — a repo
+  creation (hard boundary) that workspace#2 is parked on. Project pages keeps
+  the repo as the source of truth and serves at the address the issue proposed;
+  if the org site is later created, the `docs/` source carries over unchanged.
+- README gains a "Website" section and the structure block now lists `docs/`
+  and the Pages workflow.
+
 ## [1.4.1] - 2026-09-21
 
 - **Credited the sources.** README gains a "Sources & inspiration" section
