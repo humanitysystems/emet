@@ -3,6 +3,14 @@
 All changes to the Emet agent definition are tracked here. Versioned per the
 `version` frontmatter in `SKILL.md`.
 
+## [1.5.2] - 2026-09-21
+
+- **Landing page: "Wear it as a skin" → "Write it on the brow."** The section
+  that loads Emet into a harness is now named for the legend's animation act —
+  the rabbi writes אמת on the golem's brow — echoing the soul section above it.
+  Nav link shortened to "Animate"; hero CTA and anchor updated to match. Driven
+  by Ethan's review.
+
 ## [1.5.1] - 2026-09-21
 
 - **Landing page: dropped the "Sources" section.** The attribution list
