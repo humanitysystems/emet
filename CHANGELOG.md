@@ -3,6 +3,13 @@
 All changes to the Emet agent definition are tracked here. Versioned per the
 `version` frontmatter in `SKILL.md`.
 
+## [1.5.5] - 2026-09-21
+
+- **Landing page: hero headline is now just the word.** The hero h1 drops the
+  "— I stand behind the record." tagline and stands as simply אמת — the word
+  itself, in gold, at display scale. The dead `.gradient` rule is removed with
+  it. Driven by Ethan's direction.
+
 ## [1.5.4] - 2026-09-21
 
 - **Landing page restyled to the Cosmic Kabbalah design system.** New

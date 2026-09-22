@@ -236,14 +236,6 @@ em {
   margin-bottom: var(--space-md);
 }
 
-.hero h1 .gradient {
-  background: linear-gradient(90deg, var(--gold), var(--cyan));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-}
-
 .lead {
   font-size: 1.0625rem;
   line-height: 1.6;
