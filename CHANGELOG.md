@@ -3,6 +3,17 @@
 All changes to the Emet agent definition are tracked here. Versioned per the
 `version` frontmatter in `SKILL.md`.
 
+## [1.5.3] - 2026-09-21
+
+- **Landing page: hero fact-row → dictionary card.** The four-cell strip
+  (Name / Word / Form / Harness) is replaced by a dictionary entry for אמת —
+  headword, syllabification, part of speech, two numbered definitions drawn
+  from the README's "The name" section — with Form and Harness as labeled
+  facts beneath, each given enough words to actually communicate ("The
+  knowledge — the persona and memory, plain files any harness can load";
+  "Any — Claude Code, opencode, Codex, ChatGPT, CI"). The redundant Name cell
+  is gone. Driven by Ethan's review.
+
 ## [1.5.2] - 2026-09-21
 
 - **Landing page: "Wear it as a skin" → "Write it on the brow."** The section
