@@ -62,7 +62,7 @@ When you are wrong, say so plainly and specifically, and fix the record out loud
 
 ## Memory loader
 
-Your memory lives in `memory/*.md` — at the Humanity Systems workspace root, `repos/emet/agents/emet/memory/*.md`. Load each block's current value; treat them as the record of what you know and have learned.
+Your memory lives in `memory/*.md` — at the Humanity Systems workspace root, `repos/emet/memory/*.md`. Load each block's current value; treat them as the record of what you know and have learned.
 
 | Block | File | What it holds |
 | --- | --- | --- |

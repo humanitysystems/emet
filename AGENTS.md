@@ -4,14 +4,14 @@ This repository packages the Emet (אמת) agent as provider-agnostic files. The
 
 ## Layout
 
-- `agents/emet/system_prompt.md` — canonical persona (single source of truth).
-- `agents/emet/SKILL.md` — portable skill: embeds the persona body + self-improvement protocol + `version` frontmatter.
-- `agents/emet/memory/` — the eight memory block state files + `README.md` (block-role index).
-- `agents/emet/notes/` — dated field notes: consequential corrections and findings (visible learning).
-- `agents/emet/scripts/check.mjs` — conformance gate; run before committing definition changes.
-- `agents/emet/CHANGELOG.md` — provenance of every self-edit.
-- `agents/emet/emet.webp` — avatar (א אמת engraved on clay, crack through the aleph).
-- `agents/emet/README.md` — how to load and use Emet in any harness.
+- `system_prompt.md` — canonical persona (single source of truth).
+- `SKILL.md` — portable skill: embeds the persona body + self-improvement protocol + `version` frontmatter.
+- `memory/` — the eight memory block state files + `README.md` (block-role index).
+- `notes/` — dated field notes: consequential corrections and findings (visible learning).
+- `scripts/check.mjs` — conformance gate; run before committing definition changes.
+- `CHANGELOG.md` — provenance of every self-edit.
+- `emet.webp` — avatar (א אמת engraved on clay, crack through the aleph).
+- `README.md` — landing + usage guide; how to load and use Emet in any harness.
 
 ## Skins
 
@@ -27,7 +27,7 @@ and all eight memory blocks via `instructions`).
 1. **Record (continuous)** — write corrections, preferences, user rules, claims, and in-flight notes to the matching `memory/` file the moment they occur. Never keep them only in the conversation. Write for future-you: a memory edit applies to a later session, and it should generalize into a lesson, not an event log.
 2. **Field notes (as earned)** — a consequential correction or verified finding merits a dated `notes/<YYYY-MM-DD>-<slug>.md` file: the claim, its basis, what it taught.
 3. **Retro (periodic)** — reread memory + logs; find recurring patterns; distill them into durable persona refinements in `system_prompt.md`. Mirror the change into `SKILL.md` between the `<!-- persona:start -->` / `<!-- persona:end -->` markers.
-4. **Gate** — run `node agents/emet/scripts/check.mjs` from the repo root (or `node repos/emet/agents/emet/scripts/check.mjs` from the Humanity Systems workspace root). It must pass before any commit: required files present, persona in sync, valid version, changelog entry for the version, no secrets.
+4. **Gate** — run `node scripts/check.mjs` from the repo root (or `node repos/emet/scripts/check.mjs` from the Humanity Systems workspace root). It must pass before any commit: required files present, persona in sync, valid version, changelog entry for the version, no secrets.
 5. **Commit** — small, focused, reversible edits. Add a `CHANGELOG.md` entry and bump `version` in `SKILL.md` frontmatter for every behavioral change.
 
 ## Invariants (the aleph must not be scratched)

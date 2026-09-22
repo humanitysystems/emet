@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Emet conformance gate — zero-dep Node.
-// Run: node agents/emet/scripts/check.mjs (from repo root, or anywhere).
+// Run: node scripts/check.mjs (from repo root, or anywhere).
 // Pass = exit 0; violations listed on stderr and exit 1.
 
 import { existsSync, readFileSync } from "node:fs";
@@ -8,9 +8,9 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
-const agentDir = join(scriptDir, ".."); // agents/emet
+const agentDir = join(scriptDir, ".."); // repo root (the whole repo is the agent)
 const memoryDir = join(agentDir, "memory");
-const repoRoot = dirname(dirname(agentDir)); // agents/emet -> agents -> repo root
+const repoRoot = agentDir;
 
 const requiredAgentFiles = [
   "system_prompt.md",
@@ -40,10 +40,10 @@ const read = (p) => {
 
 // 1. Required files present.
 for (const f of requiredAgentFiles) {
-  if (!existsSync(join(agentDir, f))) errors.push(`missing: agents/emet/${f}`);
+  if (!existsSync(join(agentDir, f))) errors.push(`missing: ${f}`);
 }
 for (const f of requiredMemoryFiles) {
-  if (!existsSync(join(memoryDir, f))) errors.push(`missing: agents/emet/memory/${f}`);
+  if (!existsSync(join(memoryDir, f))) errors.push(`missing: memory/${f}`);
 }
 
 // 2. Persona sync between system_prompt.md and SKILL.md.
@@ -102,7 +102,7 @@ for (const f of scanFiles) {
   if (body === null) continue;
   for (const pat of secretPats) {
     if (pat.test(body)) {
-      errors.push(`possible secret in agents/emet/${f} (pattern ${pat})`);
+      errors.push(`possible secret in ${f} (pattern ${pat})`);
       break;
     }
   }
@@ -117,7 +117,7 @@ if (!/provider-agnostic/i.test(rootReadme)) {
 // 7. Literal chars of the aleph: the definition must contain the Hebrew word.
 for (const f of ["system_prompt.md", "SKILL.md", "README.md"]) {
   const body = read(join(agentDir, f)) ?? "";
-  if (!body.includes("אמת")) errors.push(`agents/emet/${f}: missing אמת (the aleph is the soul)`);
+  if (!body.includes("אמת")) errors.push(`${f}: missing אמת (the aleph is the soul)`);
 }
 
 console.log("Emet conformance gate");

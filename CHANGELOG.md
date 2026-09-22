@@ -3,6 +3,18 @@
 All changes to the Emet agent definition are tracked here. Versioned per the
 `version` frontmatter in `SKILL.md`.
 
+## [1.4.0] - 2026-09-21
+
+- **Flattened the repo.** The whole repository is now the agent: contents of
+  `agents/emet/` moved up to the repo root (`system_prompt.md`, `SKILL.md`,
+  `AGENTS.md`, `CHANGELOG.md`, `emet.webp`, `memory/`, `notes/`, `scripts/`).
+  The `agents/` prefix was a leftover of the original Letta account-scoped
+  layout (`agents/@humanitysystems/emet/emet.af`); nothing required it, and the
+  repo hosts exactly one agent. The two READMEs merged into one root
+  `README.md` (landing + usage guide).
+- All path references updated to the flat layout (persona memory-loader, gate
+  invocation, docs, memory, the opencode skin in the workspace root).
+
 ## [1.3.0] - 2026-09-21
 
 - **Emet is the knowledge; harnesses wear it as a skin.** Persona gains a
