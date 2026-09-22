@@ -10,5 +10,6 @@ Active working memory.
 - Warrant landing page: filed warrant#31 (2026-09-21) proposing a static landing page at https://humanitysystems.github.io/warrant (currently 404, no Pages workflow) using the Neuron/Parchment system from DESIGN.md. Awaiting Ethan's review of the three open questions before scoping a worktree.
 - Org developer index: filed workspace#2 (2026-09-21) proposing a super-simple single-page developer index at https://humanitysystems.github.io modeled on letta.com (one-line mission, tagline, projects with install commands, principles strip, footer), Neuron/Parchment, static HTML/CSS. Requires repo creation (hard boundary) + sequencing after warrant#31.
 - Context: warrant repo runs its MCP locally (`node dist/server.js`, `cwd: repos/warrant`); the private `memory` repo is a wiki seed, unrelated to Emet's memory blocks here.
+- Org profile: `.github` repo added to the workspace manifest (group "org", `repos/.github`) — it holds the org profile README (`profile/README.md`), which now lists Emet (👾) in Repositories & Resources with a link to the landing page. The org profile is the developer-facing front door until workspace#2's org index lands.
 
 Working notes for in-progress work. Summarized between sessions.
