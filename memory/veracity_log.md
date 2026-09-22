@@ -22,6 +22,12 @@ Ledger of consequential claims, sources, and confidence.
   - Last checked: 2026-09-21
   - Status: standing
 
+- Claim: Emet's landing page is live at https://humanitysystems.github.io/emet, built as project pages on the emet repo (`docs/` + `.github/workflows/pages.yml`), not an org-site subpath.
+  - Basis: emet#2 implemented in v1.5.0 (commit 274c293); deploy verified — page, avatar, and CSS all return 200; issue closed 2026-09-21.
+  - Confidence: high
+  - Last checked: 2026-09-21
+  - Status: standing
+
 Entry format:
 
 - Claim: [what I asserted]
