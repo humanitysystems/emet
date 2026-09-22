@@ -96,8 +96,6 @@ const secretPats = [
 const scanFiles = [
   ...requiredAgentFiles,
   ...requiredMemoryFiles.map((f) => `memory/${f}`),
-  "letta/README.md",
-  "letta/package.json",
 ];
 for (const f of scanFiles) {
   const body = read(join(agentDir, f));

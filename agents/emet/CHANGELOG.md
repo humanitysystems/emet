@@ -3,6 +3,32 @@
 All changes to the Emet agent definition are tracked here. Versioned per the
 `version` frontmatter in `SKILL.md`.
 
+## [1.3.0] - 2026-09-21
+
+- **Emet is the knowledge; harnesses wear it as a skin.** Persona gains a
+  "Skins" section and an explicit "memory-first evolution" discipline: learning
+  flows to memory blocks, writtten for future-you (edits apply to later
+  sessions, never the current turn) and generalized into lessons, not logs.
+  Persona refinements are earned through the retro pass and the conformance
+  gate.
+- **Field notes.** New `notes/` convention: consequential corrections and
+  verified findings earn dated `notes/<YYYY-MM-DD>-<slug>.md` artifacts so
+  self-improvement stays audibly visible (pattern: `ezra-letta/ezra`).
+- **Memory index.** New `memory/README.md` documents block roles (identity,
+  knowledge, transient, record) and the write-for-future-self discipline.
+- **Memory seeded.** `about_user`, `preferences`, `scratchpad`, and
+  `veracity_log` seeded with real Humanity Systems context; first veracity
+  entries recorded.
+- **Letta de-scoped.** `letta/` adapter removed (Emet is not animated on a Letta
+  runtime); gate no longer scans it; GitHub issue #1 closed.
+- **Workspace skin.** The Humanity Systems workspace root now wears Emet as its
+  default opencode agent (`default_agent` + `instructions` preload of the
+  persona and all eight memory blocks). Driven by Ethan's direction that opening
+  the workspace should mean talking with Emet, with tools and context ready.
+- **Worktree exception documented.** This definition repo (and the workspace-root
+  config) commit directly to `main` as a documented exception to the child-repo
+  worktree rule; noted in both `AGENTS.md` files.
+
 ## [1.2.0] - 2026-09-21
 
 - Added the Letta animation adapter under `letta/`: `bootstrap.mjs` instantiates
