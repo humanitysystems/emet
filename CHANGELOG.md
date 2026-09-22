@@ -3,6 +3,14 @@
 All changes to the Emet agent definition are tracked here. Versioned per the
 `version` frontmatter in `SKILL.md`.
 
+## [1.5.1] - 2026-09-21
+
+- **Landing page: dropped the "Sources" section.** The attribution list
+  (repo, README, OpenCode docs, Letta Agent File, Ezra) lives in the README's
+  "Sources & inspiration" section, which the page already links to from "Wear
+  it as a skin". One page, one place for attribution — driven by Ethan's
+  review. Dead `.source-list` CSS removed with it.
+
 ## [1.5.0] - 2026-09-21
 
 - **Landing page.** New `docs/` static site (plain HTML/CSS, Neuron/Parchment

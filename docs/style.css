@@ -525,34 +525,6 @@ em {
   color: var(--accent-on-dark);
 }
 
-/* Sources */
-
-.source-list {
-  list-style: none;
-  border-top: 1px solid var(--border);
-  max-width: var(--measure-narrow);
-}
-
-.source-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: var(--space-sm);
-  padding: var(--space-md) 0;
-  border-bottom: 1px solid var(--border);
-}
-
-.source-list .src-name {
-  font-weight: 600;
-  color: var(--text);
-}
-
-.source-list .src-desc {
-  color: var(--text-muted);
-  font-size: 0.875rem;
-  text-align: right;
-}
-
 /* ---------- Footer ---------- */
 
 .site-footer {
