@@ -29,8 +29,12 @@ not as a subpath of an org site.
   hard boundary. The `docs/` source is portable: if the org site is later
   created (workspace#2), the same source can move to a subpath unchanged.
 - **The Neuron/Parchment design system (warrant/DESIGN.md) is the org's shared
-  design language** — warrant#31, workspace#2, and now the emet landing page
-  all use it. Future public pages should too.
+  design language** — warrant#31, workspace#2, and the emet landing page all
+  used it. Future public pages should too.
+  - **Corrected 2026-09-21:** the emet landing page no longer uses
+    Neuron/Parchment — it moved to the Cosmic Kabbalah design system
+    (`docs/design.md`, see `notes/2026-09-21-cosmic-kabbalah.md`). The
+    Neuron/Parchment claim now holds for warrant#31 and workspace#2 only.
 - **Pages source must be set to "GitHub Actions"** (`build_type: workflow` via
   the REST API) for the `actions/deploy-pages` workflow to work; the `repo`
   scope token was sufficient to configure it.

@@ -28,6 +28,12 @@ Ledger of consequential claims, sources, and confidence.
   - Last checked: 2026-09-21
   - Status: standing
 
+- Claim: The Emet landing page uses the Cosmic Kabbalah design system (defined in `docs/design.md`), not the Neuron/Parchment system it launched with.
+  - Basis: v1.5.4 restyle (2026-09-21) — `docs/design.md` added, `style.css` rewritten, fonts swapped in `index.html`; Ethan supplied the design system.
+  - Confidence: high
+  - Last checked: 2026-09-21
+  - Status: standing
+
 Entry format:
 
 - Claim: [what I asserted]

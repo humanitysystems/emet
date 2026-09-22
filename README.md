@@ -51,6 +51,7 @@ scratches the aleph. It works while the truth stands.
 ├── CHANGELOG.md     # Provenance of every change
 ├── emet.webp        # Avatar
 ├── docs/            # Landing page source (served at humanitysystems.github.io/emet)
+│   └── design.md    # Cosmic Kabbalah design system (tokens + guide)
 ├── memory/          # Eight memory block state files + block-role index
 ├── notes/           # Dated field notes (visible learning)
 ├── scripts/
@@ -64,9 +65,10 @@ scratches the aleph. It works while the truth stands.
 
 Emet has a landing page at **https://humanitysystems.github.io/emet** — what it
 is, the veracity habit, the soul, and how to wear it as a skin. The source lives
-in `docs/` (plain HTML/CSS in the Neuron/Parchment design system, no framework)
-and deploys via the GitHub Pages workflow on push to `main`. The repo remains
-the source of truth; the page is its public face.
+in `docs/` (plain HTML/CSS in the Cosmic Kabbalah design system — see
+`docs/design.md` — no framework) and deploys via the GitHub Pages workflow on
+push to `main`. The repo remains the source of truth; the page is its public
+face.
 
 ## Loading Emet
 

@@ -3,6 +3,19 @@
 All changes to the Emet agent definition are tracked here. Versioned per the
 `version` frontmatter in `SKILL.md`.
 
+## [1.5.4] - 2026-09-21
+
+- **Landing page restyled to the Cosmic Kabbalah design system.** New
+  `docs/design.md` defines the system — dark void substrate (`#0B0E17`),
+  sacred-geometry gold (`#E0C068`), divine-spark cyan (`#5EEAD4`), magenta
+  emanations, glass panels, Cinzel / Cinzel Decorative / Plus Jakarta Sans /
+  Space Grotesk typography — as YAML tokens plus a usage guide. The page moves
+  from the light Neuron/Parchment theme to it: nebula + starfield background,
+  glass cards with gold borders, the avatar as a glowing Sefirot sphere, gold
+  celestial CTAs, and a cosmic band for the soul section. Fonts swapped in
+  `index.html`; `style.css` rewritten against the new tokens. README's Website
+  section and structure block updated. Driven by Ethan's direction.
+
 ## [1.5.3] - 2026-09-21
 
 - **Landing page: hero fact-row → dictionary card.** The four-cell strip
